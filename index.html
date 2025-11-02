@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Анкета для друзей </title>
+<title>Анкета для друзей</title>
 <style>
     body {
         font-family: 'Trebuchet MS', sans-serif;
-        background: linear-gradient(135deg, #2b002b, #000000);
+        background: linear-gradient(135deg, #000000, #1a1a1a);
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
         margin: 0;
-        color: #fff0f6;
+        color: #f0f0f0;
     }
 
     .container {
-        background: rgba(50, 0, 40, 0.9);
+        background: rgba(25, 25, 25, 0.95);
         padding: 30px 40px;
         border-radius: 20px;
-        box-shadow: 0 0 25px rgba(255, 105, 180, 0.5);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
         width: 90%;
         max-width: 500px;
     }
@@ -28,57 +28,57 @@
     h1 {
         text-align: center;
         color: #ffffff;
-        text-shadow: 0 0 10px #ff9bcf;
+        text-shadow: 0 0 10px #ffffff;
         margin-bottom: 20px;
     }
 
     label {
         display: block;
         margin-top: 12px;
-        color: #ffb6d5;
+        color: #e0e0e0;
         font-weight: bold;
     }
 
     input, textarea {
         width: 100%;
         padding: 8px;
-        border: 2px solid #ff85c1;
+        border: 2px solid #888;
         border-radius: 10px;
         margin-top: 5px;
         font-size: 15px;
-        background-color: #1a001a;
+        background-color: #0d0d0d;
         color: #ffffff;
         transition: 0.3s;
     }
 
     input:focus, textarea:focus {
-        border-color: #ffb3da;
+        border-color: #ffffff;
         outline: none;
-        box-shadow: 0 0 10px #ff80b5;
+        box-shadow: 0 0 10px #ffffff;
     }
 
     button {
         margin-top: 20px;
         width: 100%;
         background-color: #ffffff;
-        color: white;
+        color: #000000;
         border: none;
         padding: 12px;
         font-size: 16px;
         border-radius: 10px;
         cursor: pointer;
         transition: 0.3s;
-        box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+        font-weight: bold;
     }
 
     button:hover {
-        background-color: #ff70b9;
-        box-shadow: 0 0 20px rgba(255, 150, 200, 0.5);
+        background-color: #dddddd;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
     }
 
     .saved {
         margin-top: 15px;
-        color: #9cffb0;
+        color: #b0ffb0;
         text-align: center;
         font-weight: bold;
     }
@@ -86,7 +86,7 @@
 </head>
 <body>
 <div class="container">
-    <h1> Анкета для друзей </h1>
+    <h1>Анкета для друзей</h1>
 
     <form id="friendForm">
         <label>Имя:</label>
@@ -104,13 +104,13 @@
         <label>Дата дня рождения:</label>
         <input type="date" id="birthday">
 
-        <label>Кто тебе нравится и с какого класса он(а):</label>
+        <label>Кто ему (ей) нравится и с какого класса он(а):</label>
         <input type="text" id="crush">
 
         <label>Знак зодиака:</label>
         <input type="text" id="zodiac">
 
-        <label>Кто твои друзья (подруги):</label>
+        <label>Кто его (её) друзья (подруги):</label>
         <textarea id="friends" rows="3"></textarea>
 
         <button type="submit">💾 Сохранить</button>
