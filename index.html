@@ -1,186 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Анкета для друзей ☕</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Анкета друзей</title>
+  <style>
     body {
-        font-family: 'Trebuchet MS', sans-serif;
-        background: linear-gradient(135deg, #2b1b10, #120d08);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        color: #f5e6ca;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #2b1a1a, #1a0f0f);
+      color: #fefefe;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
-
     .container {
-        background: rgba(40, 25, 15, 0.95);
-        padding: 35px 45px;
-        border-radius: 20px;
-        box-shadow: 0 0 40px rgba(255, 200, 120, 0.2);
-        width: 90%;
-        max-width: 500px;
-        transition: 0.6s ease;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 30px 40px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
     }
-
     h1 {
-        text-align: center;
-        color: #ffdb9b;
-        text-shadow: 0 0 15px rgba(255, 200, 120, 0.5);
-        margin-bottom: 25px;
-        font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 25px;
+      font-size: 26px;
     }
-
     label {
-        display: block;
-        margin-top: 12px;
-        color: #f2d8b3;
-        font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      color: #f9f9f9;
+      font-weight: 500;
     }
-
     input, textarea {
-        width: 100%;
-        padding: 9px;
-        border: 2px solid #b38b5d;
-        border-radius: 10px;
-        margin-top: 6px;
-        font-size: 15px;
-        background-color: #2e2015;
-        color: #fff3d6;
-        transition: 0.3s;
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      outline: none;
+      font-size: 15px;
+      transition: 0.2s;
     }
-
     input:focus, textarea:focus {
-        border-color: #ffdb9b;
-        outline: none;
-        box-shadow: 0 0 10px rgba(255, 219, 155, 0.6);
+      background: rgba(255,255,255,0.25);
     }
-
     button {
-        margin-top: 20px;
-        width: 100%;
-        background-color: #ffdb9b;
-        color: #3b250f;
-        border: none;
-        padding: 12px;
-        font-size: 16px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 0.3s;
-        font-weight: bold;
-        box-shadow: 0 0 10px rgba(255, 219, 155, 0.4);
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background: #ffffff;
+      color: #2b1a1a;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
     }
-
     button:hover {
-        background-color: #ffe3b8;
-        box-shadow: 0 0 20px rgba(255, 230, 170, 0.5);
+      background: #f0e6e6;
     }
-
-    .saved {
-        margin-top: 15px;
-        color: #aaffaa;
-        text-align: center;
-        font-weight: bold;
+    .message {
+      text-align: center;
+      margin-top: 20px;
+      color: #d4ffb2;
+      display: none;
     }
-
-    /* Анимация появления */
-    .container {
-        opacity: 0;
-        transform: translateY(30px);
-        animation: fadeIn 1.5s ease forwards;
-    }
-
-    @keyframes fadeIn {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-</style>
+  </style>
 </head>
 <body>
-<div class="container">
-    <h1>☕ Анкета для друзей ☕</h1>
+  <div class="container">
+    <h1>Анкета друзей 🌷</h1>
 
-    <form id="friendForm">
-        <label>Имя:</label>
-        <input type="text" id="firstName" required>
+    <label>Имя и фамилия</label>
+    <input id="name" type="text" />
 
-        <label>Фамилия:</label>
-        <input type="text" id="lastName">
+    <label>Как зовут друзья</label>
+    <input id="nickname" type="text" />
 
-        <label>Как его (её) зовут друзья:</label>
-        <input type="text" id="nickname">
+    <label>Класс</label>
+    <input id="class" type="text" />
 
-        <label>Класс:</label>
-        <input type="text" id="class">
+    <label>Дата рождения</label>
+    <input id="birthdate" type="date" />
 
-        <label>Дата дня рождения:</label>
-        <input type="date" id="birthday">
+    <label>Кто нравится</label>
+    <input id="crush" type="text" />
 
-        <label>Кто ему (ей) нравится и с какого класса он(а):</label>
-        <input type="text" id="crush">
+    <label>С какого класса он(а)</label>
+    <input id="crushClass" type="text" />
 
-        <label>Знак зодиака:</label>
-        <input type="text" id="zodiac">
+    <label>Знак зодиака</label>
+    <input id="zodiac" type="text" />
 
-        <label>Кто его (её) друзья (подруги):</label>
-        <textarea id="friends" rows="3"></textarea>
+    <label>Друзья (подруги)</label>
+    <textarea id="friends"></textarea>
 
-        <button type="submit">💾 Сохранить</button>
-        <button type="button" id="clear">🗑 Очистить</button>
-    </form>
+    <button onclick="submitForm()">Сохранить</button>
 
-    <div class="saved" id="savedMessage"></div>
-</div>
+    <div class="message" id="message">в✅ Анкета сохранена</div>
+  </div>
 
-<script>
-    const form = document.getElementById('friendForm');
-    const savedMessage = document.getElementById('savedMessage');
+  <script>
+    async function submitForm() {
+      const data = {
+        name: document.getElementById("name").value,
+        nickname: document.getElementById("nickname").value,
+        class: document.getElementById("class").value,
+        birthdate: document.getElementById("birthdate").value,
+        crush: document.getElementById("crush").value,
+        crushClass: document.getElementById("crushClass").value,
+        zodiac: document.getElementById("zodiac").value,
+        friends: document.getElementById("friends").value
+      };
 
-    // Загружаем сохранённые данные при открытии страницы
-    window.addEventListener('load', () => {
-        const savedData = JSON.parse(localStorage.getItem('friendData'));
-        if (savedData) {
-            document.getElementById('firstName').value = savedData.firstName || '';
-            document.getElementById('lastName').value = savedData.lastName || '';
-            document.getElementById('nickname').value = savedData.nickname || '';
-            document.getElementById('class').value = savedData.class || '';
-            document.getElementById('birthday').value = savedData.birthday || '';
-            document.getElementById('crush').value = savedData.crush || '';
-            document.getElementById('zodiac').value = savedData.zodiac || '';
-            document.getElementById('friends').value = savedData.friends || '';
-        }
-    });
-
-    // Сохранение анкеты
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        const data = {
-            firstName: document.getElementById('firstName').value,
-            lastName: document.getElementById('lastName').value,
-            nickname: document.getElementById('nickname').value,
-            class: document.getElementById('class').value,
-            birthday: document.getElementById('birthday').value,
-            crush: document.getElementById('crush').value,
-            zodiac: document.getElementById('zodiac').value,
-            friends: document.getElementById('friends').value
-        };
-        localStorage.setItem('friendData', JSON.stringify(data));
-        savedMessage.textContent = "✅ Анкета сохранена!";
-        setTimeout(() => savedMessage.textContent = "", 3000);
-    });
-
-    // Очистка данных
-    document.getElementById('clear').addEventListener('click', () => {
-        localStorage.removeItem('friendData');
-        form.reset();
-        savedMessage.textContent = "🗑 Данные удалены!";
-        setTimeout(() => savedMessage.textContent = "", 3000);
-    });
-</script>
+      try {
+        await fetch("https://script.google.com/macros/s/AKfycbx7Wgw6SpDegvpvB9CULunP0m7WReUVSZ3GneqZgTasQ101w3aLrKmSiQCV33lESRfU/exec", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+        document.getElementById("message").style.display = "block";
+        setTimeout(() => {
+          document.getElementById("message").style.display = "none";
+        }, 3000);
+      } catch (err) {
+        alert("Ошибка при отправке анкеты!");
+        console.error(err);
+      }
+    }
+  </script>
 </body>
 </html>
