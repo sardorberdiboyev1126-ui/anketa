@@ -122,13 +122,14 @@
       };
 
       try {
-        await fetch("https://script.google.com/macros/s/AKfycbx7Wgw6SpDegvpvB9CULunP0m7WReUVSZ3GneqZgTasQ101w3aLrKmSiQCV33lESRfU/exec", {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-Type": "application/json"
-          }
-        });
+        await fetch("https://script.google.com/macros/s/AKfycbyNztvJEjH9tZ4cuLK5aN47C-BDCPyIl_7xTKx7jI19zAsp4Zu0itj_NertMKCpk4NG/exec", {
+  method: "POST",
+  body: JSON.stringify(data),
+  headers: {
+    "Content-Type": "application/json"
+  }
+});
+
         document.getElementById("message").style.display = "block";
         setTimeout(() => {
           document.getElementById("message").style.display = "none";
