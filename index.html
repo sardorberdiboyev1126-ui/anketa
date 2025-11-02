@@ -3,65 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Анкета для друзей</title>
+<title>Анкета для друзей ☕</title>
 <style>
     body {
         font-family: 'Trebuchet MS', sans-serif;
-        background: linear-gradient(135deg, #000000, #1a1a1a);
+        background: linear-gradient(135deg, #2b1b10, #120d08);
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
         margin: 0;
-        color: #f0f0f0;
+        color: #f5e6ca;
     }
 
     .container {
-        background: rgba(25, 25, 25, 0.95);
-        padding: 30px 40px;
+        background: rgba(40, 25, 15, 0.95);
+        padding: 35px 45px;
         border-radius: 20px;
-        box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 40px rgba(255, 200, 120, 0.2);
         width: 90%;
         max-width: 500px;
+        transition: 0.6s ease;
     }
 
     h1 {
         text-align: center;
-        color: #ffffff;
-        text-shadow: 0 0 10px #ffffff;
-        margin-bottom: 20px;
+        color: #ffdb9b;
+        text-shadow: 0 0 15px rgba(255, 200, 120, 0.5);
+        margin-bottom: 25px;
+        font-weight: bold;
     }
 
     label {
         display: block;
         margin-top: 12px;
-        color: #e0e0e0;
+        color: #f2d8b3;
         font-weight: bold;
     }
 
     input, textarea {
         width: 100%;
-        padding: 8px;
-        border: 2px solid #888;
+        padding: 9px;
+        border: 2px solid #b38b5d;
         border-radius: 10px;
-        margin-top: 5px;
+        margin-top: 6px;
         font-size: 15px;
-        background-color: #0d0d0d;
-        color: #ffffff;
+        background-color: #2e2015;
+        color: #fff3d6;
         transition: 0.3s;
     }
 
     input:focus, textarea:focus {
-        border-color: #ffffff;
+        border-color: #ffdb9b;
         outline: none;
-        box-shadow: 0 0 10px #ffffff;
+        box-shadow: 0 0 10px rgba(255, 219, 155, 0.6);
     }
 
     button {
         margin-top: 20px;
         width: 100%;
-        background-color: #ffffff;
-        color: #000000;
+        background-color: #ffdb9b;
+        color: #3b250f;
         border: none;
         padding: 12px;
         font-size: 16px;
@@ -69,24 +71,39 @@
         cursor: pointer;
         transition: 0.3s;
         font-weight: bold;
+        box-shadow: 0 0 10px rgba(255, 219, 155, 0.4);
     }
 
     button:hover {
-        background-color: #dddddd;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        background-color: #ffe3b8;
+        box-shadow: 0 0 20px rgba(255, 230, 170, 0.5);
     }
 
     .saved {
         margin-top: 15px;
-        color: #b0ffb0;
+        color: #aaffaa;
         text-align: center;
         font-weight: bold;
+    }
+
+    /* Анимация появления */
+    .container {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 </style>
 </head>
 <body>
 <div class="container">
-    <h1>Анкета для друзей</h1>
+    <h1>☕ Анкета для друзей ☕</h1>
 
     <form id="friendForm">
         <label>Имя:</label>
